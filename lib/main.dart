@@ -57,7 +57,7 @@ class HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
       ),
       body: ListView.builder(
-        itemCount: tenpingListData == null ? 0 : listData.length,
+        itemCount: tenpingListData.isEmpty ? 0 : listData.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
             child: GestureDetector(
