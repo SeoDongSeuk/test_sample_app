@@ -78,6 +78,7 @@ class HomePageState extends State<HomePage> {
                         children: [
                           Container(
                             margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                            //width: (MediaQuery.of(context).size.width) - 20,
                             width: 260,
                             child: Text(
                               tenpingListData[index].contentTitle.toString(),
@@ -92,6 +93,7 @@ class HomePageState extends State<HomePage> {
               onTap: () async {
                 final url = Uri.parse(
                   tenpingListData[index].link.toString(),
+                  //'http://m.naver.com',
                 );
                 if (await canLaunchUrl(url)) {
                   launchUrl(url);
