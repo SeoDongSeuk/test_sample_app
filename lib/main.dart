@@ -80,7 +80,7 @@ class HomePageState extends State<HomePage> {
                             margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                             width: 260,
                             child: Text(
-                              listData[index]["ContentTitle"].toString(),
+                              tenpingListData[index].contentTitle.toString(),
                             ),
                           ),
                         ],
@@ -91,7 +91,7 @@ class HomePageState extends State<HomePage> {
               ),
               onTap: () async {
                 final url = Uri.parse(
-                  listData[index]["Link"],
+                  tenpingListData[index].link.toString(),
                 );
                 if (await canLaunchUrl(url)) {
                   launchUrl(url);
